@@ -21,6 +21,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'userType',
+        'status',
+        'created_at',
+        'updated_at',
     ];
 
     /**
@@ -41,4 +45,35 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function rules() {
+        return [
+            'name' => 'required|unique:users,name,'.$this->id.'|min:3',
+            'email' => 'required|unique:users,email,'.$this->id.'|min:14',
+            'password' => 'required|unique:users,password,'.$this->id.'|min:3',
+            'userType' => 'required',
+        ];
+    }
+
+    public function feedback() {
+        return [
+            'required' => 'O campo :attribute é obrigatório',
+            'email.unique' => 'O e-mail já existe',
+        ];
+    }
+
+    public function administrator()
+    {
+        return $this->hasMany(Administrator::class, 'user_id', 'id');
+    }
+
+    public function seller()
+    {
+        return $this->hasMany(Seller::class, 'user_id', 'id');
+    }
+
+    public function client()
+    {
+        return $this->hasMany(Client::class, 'user_id', 'id');
+    }
 }
