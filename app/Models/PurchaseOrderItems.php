@@ -13,7 +13,7 @@ class PurchaseOrderItems extends Model
         'product_id',
         'product_value',
         'quantity',
-        'total_value',
+        'subtotal_value',
     ];
 
     public function rules() {
@@ -22,7 +22,7 @@ class PurchaseOrderItems extends Model
             'product_id' => 'required',
             'product_value' => 'required',
             'quantity' => 'required',
-            'total_value' => 'required',
+            'subtotal_value' => 'required',
         ];
     }
 
@@ -30,5 +30,10 @@ class PurchaseOrderItems extends Model
         return [
             'required' => 'O campo :attribute é obrigatório',
         ];
+    }
+
+    public function purchaseOrderItems()
+    {
+        return $this->belongsTo(PurchaseOrder::class, 'purchase_order_items_id', 'id');
     }
 }

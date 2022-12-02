@@ -16,4 +16,13 @@ class PurchaseOrderController extends MasterApiController
         $this->model = $purchaseOrder;
         $this->request = $request;
     }
+
+    public function items($id)
+    {
+        if (!$data = $this->model->with('purchaseOrderItems')->find($id)) {
+            return response()->json(['error', 'Nada foi encontrado'], 404);
+        } else {
+            return response()->json($data);
+        }
+    }
 }

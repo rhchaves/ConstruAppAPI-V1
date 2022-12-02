@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             // $table->unsignedBigInteger('product_id');
-            $table->foreignId('product_id')->references('id')->on('products');
-            $table->integer('quantity_product');  // unsigned: somente inteiros positivos
+            // $table->foreignId('product_id')->references('id')->on('products');
+            // $table->integer('quantity_product');  // unsigned: somente inteiros positivos
             $table->string('payment');
             $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
             $table->timestamps();

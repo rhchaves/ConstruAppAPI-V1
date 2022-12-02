@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('purchase_orders', function (Blueprint $table) {
             $table->id();
-            $table->decimal('total_value');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('payment');
+            // $table->decimal('total_value');
+            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }

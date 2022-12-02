@@ -9,16 +9,16 @@ class PurchaseOrder extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'client_id',
-        'seller_id',
-        'total_value',
+        'user_id',
+        'payment',
+        'status',
     ];
 
     public function rules() {
         return [
-            'client_id' => 'required',
-            'seller_id' => 'required',
-            'total_value' => 'required',
+            // 'client_id' => 'required',
+            // 'seller_id' => 'required',
+            // 'total_value' => 'required',
         ];
     }
 
@@ -26,5 +26,10 @@ class PurchaseOrder extends Model
         return [
             'required' => 'O campo :attribute é obrigatório',
         ];
+    }
+
+    public function purchaseOrderItems()
+    {
+        return $this->hasMany(PurchaseOrderItems::class, 'purchase_order_id', 'id');
     }
 }
