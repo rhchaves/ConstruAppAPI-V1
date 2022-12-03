@@ -32,5 +32,11 @@ class ShoppingCartSeeder extends Seeder
             'payment' => 'dinheiro',
             // id 3
         ]);
+
+        ShoppingCart::create([
+            'user_id' => '13',
+            'payment' => 'credito',
+            // id 4
+        ]);
     }
 }

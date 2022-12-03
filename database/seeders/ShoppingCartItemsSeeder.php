@@ -86,5 +86,37 @@ class ShoppingCartItemsSeeder extends Seeder
             'quantity' => 9,
             'subtotal_value' => 12,
         ]);
+
+        ShoppingCartItems::create([
+            'shopping_cart_id' => 4,
+            'product_id' => 2,
+            //'product_value' => '3',
+            'quantity' => 1,
+            'subtotal_value' => 12,
+        ]);
+
+        ShoppingCartItems::create([
+            'shopping_cart_id' => 4,
+            'product_id' => 1,
+            //'product_value' => '3',
+            'quantity' => 3,
+            'subtotal_value' => 12,
+        ]);
+
+        ShoppingCartItems::create([
+            'shopping_cart_id' => 4,
+            'product_id' => 3,
+            //'product_value' => '3',
+            'quantity' => 2,
+            'subtotal_value' => 12,
+        ]);
+
+        ShoppingCartItems::create([
+            'shopping_cart_id' => 4,
+            'product_id' => 4,
+            //'product_value' => '3',
+            'quantity' => 1,
+            'subtotal_value' => 12,
+        ]);
     }
 }
