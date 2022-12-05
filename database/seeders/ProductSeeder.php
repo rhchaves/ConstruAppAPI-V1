@@ -138,14 +138,14 @@ class ProductSeeder extends Seeder
         Product::create([
             // ID 9
             'category_id' => 1,
-            'name' => 'telha-ondulada',
-            'label' => 'Telha Confibra Ondulada de Fibrocimento',
-            'description' => 'Telha de Fibrocimento P7 – 5mm.',
-            'price' => 49.90,
-            'mark' => 'Fibrocimento',
+            'name' => 'cola-branca',
+            'label' => 'Cola branca pva',
+            'description' => 'Cola branca pva extra não tóxica Tek Bond 1kg',
+            'price' => 20.90,
+            'mark' => 'Tek Bond',
             'image' => '.jpg',
             'typeSell' => 'Unidade',
-            'status' => 'inativo',
+            'status' => 'ativo',
             // 'created_by' => 1,
             //'updated_by' => 1,
         ]);
@@ -183,14 +183,14 @@ class ProductSeeder extends Seeder
         Product::create([
             // ID 12
             'category_id' => 1,
-            'name' => 'telha-ceramica',
-            'label' => 'Telha Cumeeira de Cerâmica 41x21cm 10mm',
-            'description' => 'Telha Barrobello cerâmica para cobertura de telhados residenciais espessura 2cm.',
-            'price' => 2.90,
-            'mark' => 'Barrobello',
+            'name' => 'manta-Liquida',
+            'label' => 'Manta Líquida Vedacit p/ Parede 18Kg',
+            'description' => 'Manta Líquida Vedapren p/ Parede 18Kg Branco para pintura impermeável Vedacit.',
+            'price' => 309.90,
+            'mark' => 'Vedacit',
             'image' => '.jpg',
             'typeSell' => 'Unidade',
-            'status' => 'inativo',
+            'status' => 'ativo',
             // 'created_by' => 1,
             //'updated_by' => 1,
         ]);
@@ -213,14 +213,14 @@ class ProductSeeder extends Seeder
         Product::create([
             // ID 14
             'category_id' => 2,
-            'name' => 'cabo-coaxial',
-            'label' => 'Cabo Coaxial Rg',
-            'description' => 'Cabo coaxial rg 6 95 300mts',
-            'price' => 449.90,
-            'mark' => 'FoxLux',
+            'name' => 'cola-azulejo',
+            'label' => 'Cola para azulejo e pastilha',
+            'description' => 'Cola Poly Massaplic para azulejo e pastilha Massaplic balde 5Kg Pulvitec, rende 5X mais que argamassa',
+            'price' => 104.90,
+            'mark' => 'Pulvitec',
             'image' => '.jpg',
             'typeSell' => 'Unidade',
-            'status' => 'inativo',
+            'status' => 'ativo',
             // 'created_by' => 1,
             //'updated_by' => 1,
         ]);
@@ -257,30 +257,30 @@ class ProductSeeder extends Seeder
 
         Product::create([
             // ID 17
-            'category_id' => 2,
-            'name' => 'placa-interruptor 4X2 3',
-            'label' => 'Placa 4X2 3 Módulos Com Suporte Miluz Schneider',
-            'description' => 'Termoplástico com estabilização ABS-UV',
-            'price' => 6.50,
-            'mark' => 'Schneider',
+            'category_id' => 1,
+            'name' => 'cola-rodapé',
+            'label' => 'Cola para rodapé pote 1 kilo Santa Luzia',
+            'description' => 'Produto desenvolvido para fixação de rodapés e guarnições em poliestireno junto às paredes',
+            'price' => 48.50,
+            'mark' => 'Santa Luzia',
             'image' => '.jpg',
             'typeSell' => 'Unidade',
-            'status' => 'inativo',
+            'status' => 'ativo',
             // 'created_by' => 1,
             //'updated_by' => 1,
         ]);
 
         Product::create([
             // ID 18
-            'category_id' => 2,
-            'name' => 'placa-interruptor 4x2 2',
-            'label' => 'Placa 4x2 2 modulos distanciados com suporte-preta',
-            'description' => 'Termoplástico com estabilização ABS-UV',
-            'price' => 5.50,
-            'mark' => 'Fame',
+            'category_id' => 1,
+            'name' => 'espuma-expansiva',
+            'label' => 'Espuma expansiva Quartzolit',
+            'description' => 'Espuma expansiva 500ml Quartzolit',
+            'price' => 34.90,
+            'mark' => 'Quartzolit',
             'image' => '.jpg',
             'typeSell' => 'Unidade',
-            'status' => 'inativo',
+            'status' => 'ativo',
             // 'created_by' => 1,
             //'updated_by' => 1,
         ]);
@@ -494,5 +494,21 @@ class ProductSeeder extends Seeder
             //'created_by' => 1,
             //'updated_by' => 1,
         ]);
+
+        Product::create([
+            // ID 33
+            'category_id' => 2,
+            'name' => 'barramento-disjuntor',
+            'label' => 'Barramento Disjuntor Bifásico',
+            'description' => 'Barramento Disjuntor Bifásico Branco Steck',
+            'price' => 39.90,
+            'mark' => 'Steck',
+            'image' => '121153638cb8b96dd5f.jpg',
+            'typeSell' => 'Unidade',
+            'status' => 'ativo',
+            //'created_by' => 1,
+            //'updated_by' => 1,
+        ]);
+
     }
 }
