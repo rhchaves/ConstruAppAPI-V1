@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('cpf', 11)->unique();
             // 1 -> masterAdmin, 2 -> geralAdmin, 3 -> productAdmin, 4 -> sellerAdmin, 5 -> clientAdmin
             $table->integer('type_admin')->default(0);
-            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            // $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('ativo'); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }

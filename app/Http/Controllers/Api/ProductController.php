@@ -15,6 +15,24 @@ class ProductController extends MasterApiController
     public function __construct(Product $products, Request $request) {
         $this->model = $products;
         $this->request = $request;
+        $this->item = $products;
+    }
+
+    public function filtro(Request $request)
+    {
+        $query = Product::query();
+
+        $termos = $request->only('name', 'label', 'mark');
+
+        foreach ($termos as $name => $valor) {
+            if ($valor) {
+                $query->where($name, 'LIKE', '%' . $valor . '%');
+            }
+        }
+
+        $produtos = $query->paginate();
+
+        return $produtos;
     }
 
 }

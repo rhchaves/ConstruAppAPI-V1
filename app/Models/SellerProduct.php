@@ -11,6 +11,7 @@ class SellerProduct extends Model
     protected $fillable = [
         'seller_id',
         'product_id',
+        'status',
     ];
 
     public function rules() {

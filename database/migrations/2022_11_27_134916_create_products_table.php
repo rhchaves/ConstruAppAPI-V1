@@ -22,9 +22,11 @@ return new class extends Migration
             $table->string('label', 100)->unique();
             $table->string('description');
             $table->decimal('price', 6, 2)->default(0);
-            $table->string('product_mark');
+            $table->string('mark');
             $table->string('image');
-            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('typeSell', 15);
+            // $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('ativo'); // 0 -> inativo, 1 -> ativo
             // $table->foreign('created_by')->nullable()->constrained('users');
             // $table->foreign('updated_by')->nullable()->constrained('users');
             $table->timestamps();

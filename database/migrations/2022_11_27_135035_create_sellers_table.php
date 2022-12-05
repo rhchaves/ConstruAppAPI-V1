@@ -27,7 +27,8 @@ return new class extends Migration
             $table->string('district', 60);
             $table->string('city', 60);
             $table->string('state', 2);
-            $table->integer('status')->default(0); // 0 -> inativo, 1 -> ativo
+            // $table->integer('status')->default(0); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('inativo'); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }

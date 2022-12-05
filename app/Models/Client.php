@@ -28,9 +28,9 @@ class Client extends Model
             'user_id' => 'required',
             'full_name' => 'required|min:3',
             'cpf' => 'required|unique:clients,cpf,'.$this->id.'|min:11',
-            'phone' => 'required|unique:clients,phone,'.$this->id.'|min:11',
+            // 'phone' => 'required|unique:clients,phone,'.$this->id.'|min:11',
             'street' => 'required',
-            'zip' => 'required|unique:clients,zip,'.$this->id.'|min:8',
+            // 'zip' => 'required|unique:clients,zip,'.$this->id.'|min:8',
             'district' => 'required',
             'city' => 'required',
             'state' => 'required',
@@ -41,7 +41,7 @@ class Client extends Model
         return [
             'required' => 'O campo :attribute é obrigatório',
             'cpf.unique' => 'O CPF já existe',
-            'phone.unique' => 'O telefone já existe',
+            // 'phone.unique' => 'O telefone já existe',
         ];
     }
 

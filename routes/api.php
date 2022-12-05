@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+use Illuminate\Http\Request;
 
 Route::middleware('jwt.auth')->group(function() {
 
@@ -28,7 +30,17 @@ Route::middleware('jwt.auth')->group(function() {
     Route::apiResource('category', 'App\Http\Controllers\Api\CategoriesController');
 
     // Rota para Produtos
-    // Route::get('product', 'App\Http\Controllers\Api\ProductController');
+    Route::get('/products', function (Request $request) {
+        $query = Product::query();
+        $termos = $request->only('name', 'label', 'mark');
+        foreach ($termos as $name => $valor) {
+            if ($valor) {
+                $query->where($name, 'LIKE', '%' . $valor . '%');
+            }
+        }
+        $produtos = $query->paginate();
+        return $produtos;
+    });
     Route::apiResource('product', 'App\Http\Controllers\Api\ProductController');
 
     // Rota para Carrinho de compras

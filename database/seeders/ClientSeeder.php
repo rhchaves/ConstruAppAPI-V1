@@ -37,7 +37,6 @@ class ClientSeeder extends Seeder
             'street' => 'Estr. das Lágrimas',
             'number' => '89',
             'zip' => '09581360',
-            'complement' => '',
             'district' => 'Jardim Sao Caetano',
             'city' => 'São Caetano do Sul',
             'state' => 'SP',
@@ -52,6 +51,20 @@ class ClientSeeder extends Seeder
             'number' => '456',
             'zip' => '09581420',
             'complement' => 'casa 2',
+            'district' => 'Cerâmica',
+            'city' => 'São Caetano do Sul',
+            'state' => 'SP',
+        ]);
+
+        Client::create([
+            'user_id' => 13,
+            'full_name' => 'Usuário Teste',
+            'cpf' => '32141234156',
+            'phone' => '11322124545',
+            'street' => 'Rua Bel Aliance',
+            'number' => '675',
+            'zip' => '09581420',
+            'complement' => 'casa 4',
             'district' => 'Cerâmica',
             'city' => 'São Caetano do Sul',
             'state' => 'SP',

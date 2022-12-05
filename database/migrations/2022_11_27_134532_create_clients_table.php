@@ -19,15 +19,16 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->string('full_name', 60);
             $table->string('cpf', 11)->unique();
-            $table->string('phone', 11)->unique();
+            $table->string('phone', 11);
             $table->string('street', 60);
             $table->string('number', 10);
-            $table->string('zip', 8)->unique();
-            $table->string('complement', 60);
+            $table->string('zip', 8);
+            $table->string('complement', 60)->default('');
             $table->string('district', 60);
             $table->string('city', 60);
             $table->string('state', 2);
-            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            // $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('ativo'); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }

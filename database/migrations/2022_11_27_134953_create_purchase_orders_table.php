@@ -19,7 +19,8 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('payment');
             // $table->decimal('total_value');
-            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            // $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('ativo'); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }

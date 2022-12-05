@@ -49,10 +49,10 @@ class User extends Authenticatable implements JWTSubject
 
     public function rules() {
         return [
-            'name' => 'required|unique:users,name,'.$this->id.'|min:3',
-            'email' => 'required|unique:users,email,'.$this->id.'|min:14',
-            'password' => 'required|unique:users,password,'.$this->id.'|min:3',
-            'userType' => 'required',
+            // 'name' => 'required|unique:users,name,'.$this->id.'|min:3',
+            // 'email' => 'required|unique:users,email,'.$this->id.'|min:14',
+            // 'password' => 'required|unique:users,password,'.$this->id.'|min:3',
+            // 'userType' => 'required',
         ];
     }
 

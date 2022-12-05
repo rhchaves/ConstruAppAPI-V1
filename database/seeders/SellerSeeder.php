@@ -27,6 +27,7 @@ class SellerSeeder extends Seeder
             'district' => 'Centro',
             'city' => 'São Caetano do Sul',
             'state' => 'SP',
+            'status' => 'ativo',
         ]);
 
         Seller::create([

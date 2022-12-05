@@ -55,6 +55,7 @@ class AdministratorSeeder extends Seeder
             'full_name' => 'Vinicius Araújo',
             'cpf' => '66666666666',
             'type_admin' => 2,
+            'status' => 'inativo',
         ]);
     }
 }

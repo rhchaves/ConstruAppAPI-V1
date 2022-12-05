@@ -21,7 +21,8 @@ return new class extends Migration
             // $table->foreignId('product_id')->references('id')->on('products');
             // $table->integer('quantity_product');  // unsigned: somente inteiros positivos
             $table->string('payment');
-            $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            // $table->integer('status')->default(1); // 0 -> inativo, 1 -> ativo
+            $table->string('status')->default('ativo'); // 0 -> inativo, 1 -> ativo
             $table->timestamps();
         });
     }
